@@ -77,6 +77,16 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
+              Divider(
+                height: 10,
+                thickness: 1,
+                indent: 25,
+                endIndent: 25,
+                color: Theme.of(context).splashColor,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
