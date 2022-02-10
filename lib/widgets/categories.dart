@@ -17,7 +17,7 @@ class Categories extends StatelessWidget {
             "Categories",
             style: TextStyle(
               fontWeight: FontWeight.w600,
-              fontSize: 16,
+              fontSize: 18,
             ),
           ),
         ),

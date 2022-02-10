@@ -80,15 +80,16 @@ class FoodCard extends StatelessWidget {
                   food.category,
                   style: TextStyle(
                     overflow: TextOverflow.ellipsis,
-                    color: Theme.of(context).primaryColor,
-                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).cardColor,
+                    fontWeight: FontWeight.w600,
                     fontSize: 14,
                   ),
                 ),
                 Text(
                   food.name,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 22,
+                    color: Theme.of(context).secondaryHeaderColor,
                     fontWeight: FontWeight.bold,
                     overflow: TextOverflow.ellipsis,
                   ),

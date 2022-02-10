@@ -12,16 +12,15 @@ class Category extends StatelessWidget {
     return Container(
       width: 100.0,
       decoration: BoxDecoration(
-        color: Theme.of(context).splashColor,
-        borderRadius: BorderRadius.circular(10),
+        color: Theme.of(context).primaryColor,
+        borderRadius: BorderRadius.circular(20),
       ),
       margin: EdgeInsets.only(left: ml),
       child: Center(
         child: Text(
           title,
-          style: TextStyle(
-              color: Theme.of(context).primaryColorDark,
-              fontWeight: FontWeight.normal),
+          style:
+              const TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
         ),
       ),
     );

@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         splashColor: const Color(0xfff7f8fe),
         hintColor: const Color(0xffa9b1ca),
         primaryColorDark: const Color(0xff9498A2),
+        cardColor: const Color(0xff128fae),
         scaffoldBackgroundColor: Colors.white,
       ),
       home: const HomePage(),
@@ -71,7 +72,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               const Categories(),
               const SizedBox(
@@ -79,10 +80,10 @@ class HomePage extends StatelessWidget {
               ),
               Divider(
                 height: 10,
-                thickness: 1,
+                thickness: 0.2,
                 indent: 25,
                 endIndent: 25,
-                color: Theme.of(context).splashColor,
+                color: Theme.of(context).primaryColorDark,
               ),
               const SizedBox(
                 height: 20,
@@ -97,7 +98,7 @@ class HomePage extends StatelessWidget {
                       "Recommended for you",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 16,
+                        fontSize: 18,
                       ),
                     ),
                   ),
