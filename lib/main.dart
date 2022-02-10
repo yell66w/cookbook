@@ -1,4 +1,5 @@
-import 'package:cookbook/widgets/category.dart';
+import 'package:cookbook/widgets/categories.dart';
+import 'package:cookbook/widgets/food_showcase.dart';
 import 'package:cookbook/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -47,63 +48,38 @@ class HomePage extends StatelessWidget {
           elevation: 0,
           backgroundColor: Colors.white,
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
-                children: const [
-                  Text(
-                    "What would you like to cook today?",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 30,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  Searchbar(),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Text(
-                    "Categories",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
-                SizedBox(
-                  height: 35,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: const [
-                      Category(
-                        title: "Breakfast",
+        body: SingleChildScrollView(
+          physics: const ScrollPhysics(),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  children: const [
+                    Text(
+                      "What would you like to cook today?",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 30,
                       ),
-                      Category(title: "Lunch"),
-                      Category(title: "Dinner"),
-                      Category(title: "Snack"),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ],
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Searchbar(),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Categories(),
+              const SizedBox(
+                height: 20,
+              ),
+              const FoodShowcase()
+            ],
+          ),
         ));
   }
 }
