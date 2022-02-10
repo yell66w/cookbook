@@ -51,61 +51,64 @@ class FoodCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Theme.of(context).splashColor,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      height: 100,
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-      margin: const EdgeInsets.only(bottom: 10),
-      child: Row(
-        children: [
-          SizedBox(
-            height: 80,
-            width: 80,
-            child: CircleAvatar(
-              backgroundImage: AssetImage(food.imageURL),
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        decoration: BoxDecoration(
+          color: Theme.of(context).splashColor,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        height: 100,
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        margin: const EdgeInsets.only(bottom: 10),
+        child: Row(
+          children: [
+            SizedBox(
+              height: 80,
+              width: 80,
+              child: CircleAvatar(
+                backgroundImage: AssetImage(food.imageURL),
+              ),
             ),
-          ),
-          const SizedBox(
-            width: 16,
-          ),
-          Flexible(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  food.category,
-                  style: TextStyle(
-                    overflow: TextOverflow.ellipsis,
-                    color: Theme.of(context).cardColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                  ),
-                ),
-                Text(
-                  food.name,
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: Theme.of(context).secondaryHeaderColor,
-                    fontWeight: FontWeight.bold,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-                Text(
-                  food.author,
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColorDark,
-                    overflow: TextOverflow.ellipsis,
-                    fontSize: 14,
-                  ),
-                )
-              ],
+            const SizedBox(
+              width: 16,
             ),
-          )
-        ],
+            Flexible(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    food.category,
+                    style: TextStyle(
+                      overflow: TextOverflow.ellipsis,
+                      color: Theme.of(context).cardColor,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
+                  ),
+                  Text(
+                    food.name,
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Theme.of(context).secondaryHeaderColor,
+                      fontWeight: FontWeight.bold,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  Text(
+                    food.author,
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColorDark,
+                      overflow: TextOverflow.ellipsis,
+                      fontSize: 14,
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

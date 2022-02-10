@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
@@ -9,18 +11,21 @@ class Category extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 100.0,
-      decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      margin: EdgeInsets.only(left: ml),
-      child: Center(
-        child: Text(
-          title,
-          style:
-              const TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        width: 100.0,
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        margin: EdgeInsets.only(left: ml),
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+                color: Colors.white, fontWeight: FontWeight.w600),
+          ),
         ),
       ),
     );
