@@ -33,6 +33,7 @@ class Categories extends StatelessWidget {
             children: const [
               Category(
                 title: "Breakfast",
+                ml: 16,
               ),
               Category(title: "Lunch"),
               Category(title: "Dinner"),

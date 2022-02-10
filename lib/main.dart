@@ -77,7 +77,26 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const FoodShowcase()
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Text(
+                      "Recommended for you",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  FoodShowcase()
+                ],
+              ),
             ],
           ),
         ));

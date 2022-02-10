@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
-  const Category({Key? key, this.title = 'Lunch'}) : super(key: key);
+  const Category({Key? key, this.title = 'Lunch', this.ml = 8})
+      : super(key: key);
 
   final String title;
+  final double ml;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class Category extends StatelessWidget {
         color: Theme.of(context).splashColor,
         borderRadius: BorderRadius.circular(10),
       ),
-      margin: const EdgeInsets.only(left: 14),
+      margin: EdgeInsets.only(left: ml),
       child: Center(
         child: Text(
           title,
