@@ -7,7 +7,7 @@
         "ingredients": [
             {
                 "quantity": "1",
-                "name": " beef roast",
+                "name": "beef roast",
                 "type": "Meat"
             },
             {
@@ -52,7 +52,7 @@
         "ingredients": [
             {
                 "quantity": "1 lb",
-                "name": " asparagus",
+                "name": "asparagus",
                 "type": "Produce"
             },
             {

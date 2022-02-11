@@ -1,4 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
+import 'dart:convert';
+
+import 'package:cookbook/screens/food_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
@@ -10,6 +12,14 @@ class Ingredient {
 
   const Ingredient(
       {required this.quantity, required this.name, required this.type});
+
+  factory Ingredient.fromJson(Map<String, dynamic> json) {
+    return Ingredient(
+      name: json['name'],
+      quantity: json['quantity'],
+      type: json['type'],
+    );
+  }
 }
 
 class Food {
@@ -19,7 +29,7 @@ class Food {
   final List<dynamic> timers;
   final String imageURL;
   final String author;
-  final List<dynamic> ingredients;
+  final List<Ingredient> ingredients;
 
   const Food({
     required this.name,
@@ -32,13 +42,16 @@ class Food {
   });
 
   factory Food.fromJson(Map<String, dynamic> json) {
+    Iterable ingredients = json['ingredients'];
+
     return Food(
       name: json['name'],
       steps: json['steps'],
       timers: json['timers'],
       imageURL: json['imageURL'],
       author: json['author'],
-      ingredients: json['ingredients'],
+      ingredients:
+          List<Ingredient>.from(ingredients.map((e) => Ingredient.fromJson(e))),
       category: json['category'],
     );
   }
@@ -52,7 +65,16 @@ class FoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => FoodDetails(
+              food: food,
+            ),
+          ),
+        );
+      },
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).splashColor,
