@@ -1,3 +1,4 @@
+import 'package:cookbook/providers/filter_provider.dart';
 import 'package:cookbook/widgets/category.dart';
 import 'package:flutter/material.dart';
 
@@ -32,12 +33,13 @@ class Categories extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             children: const [
               Category(
-                title: "Breakfast",
+                title: EnumCategory.all,
                 ml: 16,
               ),
-              Category(title: "Lunch"),
-              Category(title: "Dinner"),
-              Category(title: "Snack"),
+              Category(title: EnumCategory.breakfast),
+              Category(title: EnumCategory.lunch),
+              Category(title: EnumCategory.dinner),
+              Category(title: EnumCategory.snack),
             ],
           ),
         )
