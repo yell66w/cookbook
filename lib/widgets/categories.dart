@@ -12,19 +12,19 @@ class Categories extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: Text(
-            "Categories",
-            style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: 18,
-            ),
-          ),
-        ),
-        const SizedBox(
-          height: 12,
-        ),
+        // const Padding(
+        //   padding: EdgeInsets.symmetric(horizontal: 16.0),
+        //   child: Text(
+        //     "Categories",
+        //     style: TextStyle(
+        //       fontWeight: FontWeight.w600,
+        //       fontSize: 18,
+        //     ),
+        //   ),
+        // ),
+        // const SizedBox(
+        //   height: 12,
+        // ),
         SizedBox(
           height: 35,
           child: ListView(
