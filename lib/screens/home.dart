@@ -35,15 +35,15 @@ class HomePage extends StatelessWidget {
                         fontSize: 30,
                       ),
                     ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Searchbar(),
+                    // SizedBox(
+                    //   height: 16,
+                    // ),
+                    // Searchbar(),
                   ],
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
               const Categories(),
               const SizedBox(
